@@ -1,0 +1,55 @@
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://kit.fontawesome.com/8b6003d953.js"></script>
+  <script src="node_modules/chart.js/src/chart.js"></script>
+<body id = "center">
+<div id="center" class="row">  
+
+    <div  class="colu col-11 col-md-10 col-lg-4 colA"> 
+                     <p class="coreCenter">Opciones</p>
+            <p class="coreCenter">Lista de Jugadores</p>
+           <div class="saltoA">
+               
+           </div>
+                <ul>
+                   <li>Jugador 1</li>
+                   <li>Jugador 2</li>
+                   <li>Jugador 3</li>
+               </ul>
+                    </div>
+
+        <div  class="colu col-11 col-md-10 col-lg-4" *ngIf = "host"> 
+                     <h1 class="coreCenter">Opciones de Partida</h1>
+                     <h3>TIPO DE JUEGO A REALIZAR</h3><br>
+                     <div class="form-group" >
+                            <label >Modo de Juego</label>
+                            <select class="form-control" >
+                              <option>Juego Normal</option>
+                              <option>Roles Limitados</option>
+                              <option>Sin Roles Extra</option>
+                            </select>
+                    </div>
+                    
+                    <h3>NUMERO DE JUGADORES</h3>
+                    <div class="form-group">
+                            <label >Numero de Jugadores</label>
+                            <select class="form-control" >
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                            </select>
+                    </div>
+          </div>
+          <div class="colu col-11 col-md-10 col-lg-4" *ngIf = "!host"><h3>Esperando al Anfitrion que Termine de Configurar Partida</h3></div>
+                    <div  class="colu2 col-11 col-md-10 col-lg-10 colC"> 
+                     <p class="coreCenter">Iniciar Partida</p>
+                    <p class="coreCenter">Una vez que este de acuerdo con la configuracion puede iniciar la partida</p>
+                    <a (click) = "toGameScreen()" class="brk-btn">Iniciar Nueva Partida</a>
+                   
+                    </div> 
+            
+</div>
+</body>

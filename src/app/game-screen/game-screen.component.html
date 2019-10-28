@@ -1,0 +1,80 @@
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/8b6003d953.js"></script>
+    <script src="node_modules/chart.js/src/chart.js"></script>
+<form>
+      
+            
+ <div id="center" class="row">  
+    <div class="colu col-11 col-md-10 col-lg-4 colB"> 
+                     <p class="coreCenterB">LOG</p>
+                     <div id = "log" class="overflow-auto">
+                         <p>{{text}}</p>
+                         <div *ngFor="let message of messages">
+                          <b>{{ message.user }}</b>: {{ message.text }}
+                        </div>
+                     </div>
+                     <div>
+                        <label for="userName">Username</label>
+                        <input type="text" id="userName" [(ngModel)]="userName">
+
+                        <label for="message">Message</label>
+                        <input type="text" id="message" [(ngModel)]="messageText">
+
+                        <button (click)="sendMessage(userName, messageText)">Send</button>
+                     </div>
+    </div>
+
+    <div class = "col-11 col-md-10 col-lg-4" id="colu3">
+       <div class="colu"> 
+                     <h5 class="coreCenter">INSTRUCCIONES</h5>
+                     <p>Aqui encontrarias las instrucciones, como no se que deberia de estar aqui finge que estas teniendo una buena experiencia mientras ambos fingimos saber que pasa aqui</p>
+           
+        </div>
+     
+
+        <div class="colu"> 
+                     <h5>Seleccione jugador y accion</h5>
+                     <div class="form-group">
+                            <label>Elige Jugador</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>Jugador 1</option>
+                              <option>Jugador 2</option>
+                              <option>Jugador 3</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                            <label >Elige Accion</label>
+                            <select class="form-control" name = "action" id="exampleFormControlSelect2">
+                              <option>Dormir</option>
+                            </select>
+                    </div>
+                    <br>
+
+
+                       <!-- <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>-->
+        </div>
+    </div>
+   
+     
+ <div class="colu2 col-10 colC"> 
+                     <p class="coreCenter">Iniciar Partida</p>
+                    <p class="coreCenter">Una vez que concluya con el turno selecciona cometer</p>
+                    <a class="brk-btn">Commit</a>
+                    </div>
+
+     
+     
+            
+</div>
+            
+</form>
+           
+               
+     
+
+
+
+

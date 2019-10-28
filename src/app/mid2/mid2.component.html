@@ -1,0 +1,43 @@
+<title>Juegos de la edad</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/8b6003d953.js"></script>
+    <script src="node_modules/chart.js/src/chart.js"></script>
+<div id="center" class="row">  
+                 
+ <div      class=" col-sm center"> 
+                        <div   class="colA"> 
+    <p class="tittleCenterA">Ingresa</p>
+    <div class="saltoA"></div>
+
+        <!-- Forms -->
+    <form #formulario = "ngForm" (ngSubmit) = "getData(formulario.value)" >
+        <!-- INput de forms -->
+    <input  [(ngModel)]="user" [ngModelOptions]="{standalone: true}" name="{{ user }}" class="inputA" type="text" size="30" placeholder=" Usuario*" >
+    <input  [(ngModel)]="contra" [ngModelOptions]="{standalone: true}" name="{{ contra }}" class="inputA" type="text" size="30" placeholder=" Contraseña*" >
+
+    
+     <p type="submit" class="inputA tittleCenterB"><button class="buttonA">Login</button></p>
+    
+
+    <!--
+     <p type="submit" class="inputA tittleCenterB"><button class="buttonA"><a href="home.html">Login</a></button></p>
+     -->
+    
+       <!-- BOTON QUE ACTIVA FUNCION  y sin el click llama al .ts y le manda datos
+     <button (click)="getData()" type="submit" class="buttonA">algo</button>
+     -->
+
+
+      
+     </form>
+       <!-- Forms -->
+
+    <div class="saltoA"></div>
+    <p class="coreCenter">¿No tienes cuenta?</p>
+   <a (click) = "goRegister()"> <p class="tittleCenter" >Registrate</p></a>
+                        </div>
+</div   >
+</div>
